@@ -17,6 +17,7 @@ public class UserDto {
     private String address;
     private String email;
     private String phone;
+    private String token;
 
     @Getter
     @AllArgsConstructor
@@ -29,7 +30,7 @@ public class UserDto {
         private String phone;
 
         @NotEmpty(message = "The password is mandatory")
-        @Pattern(regexp = "^(?!.*\\s).{6,}$\n", message = "The password length must be greater than or equal 6 and has no any space character")
+        @Pattern(regexp = "^(?!.*\\s).{6,}", message = "The password length must be greater than or equal 6 and has no any space character")
         private String password;
 
         @NotEmpty(message = "The name is mandatory")
@@ -46,7 +47,7 @@ public class UserDto {
         private String phone;
 
         @NotEmpty(message = "The password is mandatory")
-        @Pattern(regexp = "^(?!.*\\s).{6,}$\n", message = "The password length must be greater than or equal 6 and has no any space character")
+        @Pattern(regexp = "^(?!.*\\s).{6,}", message = "The password length must be greater than or equal 6 and has no any space character")
         private String password;
 
 
@@ -62,7 +63,7 @@ public class UserDto {
         @Pattern(regexp = "^(?:\\+84)?\\d{10,15}$", message = "The phone number has invalid")
         private String phone;
 
-        @Pattern(regexp = "^(?!.*\\s).{6,}$\n", message = "The password length must be greater than or equal 6 and has no any space character")
+        @Pattern(regexp = "^(?!.*\\s).{6,}", message = "The password length must be greater than or equal 6 and has no any space character")
         private String password;
 
         private String name;

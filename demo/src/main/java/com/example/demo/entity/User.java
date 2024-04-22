@@ -5,6 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Fetch;
+import org.springframework.context.annotation.Lazy;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -33,4 +37,7 @@ public class User {
 
     @Column(name = "Password")
     private String password;
+
+    @ManyToMany(mappedBy = "customers", fetch = FetchType.EAGER)
+    private List<Role> roles;
 }
